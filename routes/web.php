@@ -32,8 +32,7 @@ Route::post('/articles', [ArticlesController::class, 'store'])->name('articles.s
 Route::delete('/articles/{id}', [ArticlesController::class, 'destroy'])->name('articles.destroy');
 Route::get('/articles/{id}/edit', [ArticlesController::class, 'edit'])->name('articles.edit');
 Route::put('/articles/{id}', [ArticlesController::class, 'update'])->name('articles.update');
-Route::get('/articles/{id}/edit', [ArticlesController::class, 'edit'])->name('articles.edit');
-Route::put('/articles/{id}', [ArticlesController::class, 'update'])->name('articles.update');
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
     // 他のルートも追加することができます
