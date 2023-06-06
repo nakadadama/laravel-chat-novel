@@ -35,7 +35,7 @@ Route::put('/articles/{id}', [ArticlesController::class, 'update'])->name('artic
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
-    // 他のルートも追加することができます
+    
 });
 
 
