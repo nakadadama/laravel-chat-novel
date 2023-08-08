@@ -53,6 +53,9 @@ class ChatGptController extends Controller
         $data = array(
             "model" => "gpt-3.5-turbo",
             'temperature' => 0.8,
+            'top_p' => 0.8,
+    　　　　'top_k' => 50,
+   　　　　 'repetition_penalty' => 1.5,
             "messages" => [
                 [
                     "role" => "system",
